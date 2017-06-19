@@ -1,0 +1,22 @@
+<!--<h1>{{dateObj.day}}.{{dateObj.month+1}}.{{dateObj.year}}</h1>-->
+<table id="monthTable">
+   <thead>
+      <tr>
+         <th>Sunday</th>
+         <th>Monday</th>
+         <th>Tuesday</th>
+         <th>Wednesday</th>
+         <th>Thursday</th>
+         <th>Friday</th>
+         <th>Saturday</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr ng-repeat="month in months">
+         <td ng-repeat="day in month track by $index"
+            ng-class="{'today':(day.day==today), 'eventToday': day.isEvent}">
+            <span>{{day.day}}</span>
+         </td>
+      </tr>
+   </tbody>
+</table>

@@ -1,0 +1,16 @@
+<!--<h1>{{dateObj.day}}.{{dateObj.month+1}}.{{dateObj.year}}</h1>-->
+<table class="weekTable">
+   <thead>
+      <tr>
+         <th>Time</th>
+         <th ng-repeat="weekview in weekFromDate track by $index">
+            <span>{{weekview | date : 'dd EEEE'}}</span>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr ng-repeat="weektime in weekTime">
+         <td>{{weektime}}</td>
+         <td ng-repeat="weekview in weekFromDate"></td>
+      </tr>
+</table>
